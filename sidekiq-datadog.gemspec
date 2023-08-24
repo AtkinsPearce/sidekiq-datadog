@@ -4,12 +4,12 @@ require 'sidekiq/datadog/version'
 
 Gem::Specification.new do |s|
   s.name          = 'sidekiq-datadog'
-  s.version       = Sidekiq::Datadog::VERSION.dup
-  s.authors       = ['Dimitrij Denissenko']
-  s.email         = ['dimitrij@blacksquaremedia.com']
+  s.version       = File.read(File.expand_path('VERSION', __dir__)).strip
+  s.authors       = ['Pavlo Mashchak']
+  s.email         = ['pavlo.mashchak@atkinsandpearce.com']
   s.description   = 'Datadog metrics for sidekiq'
   s.summary       = 'Datadog metrics for sidekiq'
-  s.homepage      = 'https://github.com/bsm/sidekiq-datadog'
+  s.homepage      = 'https://github.com/AtkinsPearce/sidekiq-datadog'
 
   s.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   s.executables   = s.files.grep(%r{^bin/}).map {|f| File.basename(f) }
